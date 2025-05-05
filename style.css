@@ -1,0 +1,429 @@
+/* General body styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Dashboard container */
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+    gap: 20px;
+}
+
+/* Sidebar styling */
+.sidenav {
+    width: 250px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px;
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    flex-shrink: 0;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidenav h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sidenav nav ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.sidenav nav ul li {
+    margin: 15px 0;
+}
+
+.sidenav nav ul li a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: block;
+}
+
+.sidenav nav ul li a:hover {
+    background-color: #34495e;
+    transform: translateX(5px);
+}
+
+/* Sidebar buttons */
+.sidebar-actions button {
+    background-color: #1abc9c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+}
+
+.sidebar-actions button:hover {
+    background-color: #16a085;
+    transform: scale(1.05);
+}
+
+/* main content */
+.main-content {
+    flex: 1;
+    margin-left: 300px;
+    padding: 20px;
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+/* Hero Slider Section */
+.hero-slider {
+    position: relative;
+    display: flex;
+    overflow: hidden; /* Hide overflow to show one image at a time */
+    width: 100%;
+    height: 400px; /* Fixed height for the slider */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero Slide */
+.hero-slide {
+    position: relative;
+    min-width: 100%; /* Each slide takes up the full width */
+    height: 100%;
+    transition: transform 0.5s ease-in-out; /* Smooth transition for sliding effect */
+    background-size: cover; /* Ensure the image covers the entire slide */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; 
+}
+
+/* Hero Content */
+.hero-slider .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Ensure content is above the background image */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for better text visibility */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    color: #ecf0f1;
+    max-width: 800px;
+}
+
+.hero-slider h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;  
+    text-wrap: nowrap; 
+}
+
+.hero-slider p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+ 
+}
+
+.hero-slider button {
+    background-color: #1abc9c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hero-slider button:hover {
+    background-color: #16a085;
+    transform: scale(1.05);
+}
+
+.hero-slide {
+    display: none;
+}
+
+.hero-slide.active {
+    display: block;
+}
+
+
+/* sider controls */
+.slider-controls {
+    position: absolute;
+    bottom: 20px; 
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px; 
+    z-index: 10;
+    justify-content: center;
+}
+
+.slider-controls button {
+    background-color: rgba(0, 0, 0, 0.6); 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.slider-controls button:hover {
+    background-color: rgba(0, 0, 0, 0.8); 
+    transform: scale(1.1);
+}
+
+/* Card Grid */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-widgets h1,
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.dashboard-widgets p,
+.card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+.card input {
+    padding: 15px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    width: 90%;
+}
+
+/* Hover box */
+.hover-box {
+    background-color: #dff9fb;
+    transition: background-color 0.4s ease, transform 0.3s ease;
+}
+
+.hover-box.hover-effect {
+    background-color: #c7ecee;
+    transform: scale(1.05);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #888;
+}
+
+.close-modal:hover {
+    color: #333;
+}
+
+/* Signup form */
+#signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#signup-form label {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#signup-form input {
+    padding: 15px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    width: 100%;
+}
+
+#signup-form button {
+    background-color: #1abc9c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#signup-form button:hover {
+    background-color: #16a085;
+    transform: scale(1.05);
+}
+
+
+/* Dark Theme */
+body.dark-theme {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+}
+
+body.dark-theme .sidenav {
+    background-color: #34495e;
+    color: #ecf0f1;
+}
+
+body.dark-theme .main-content {
+    background-color: #3b4a5a;
+    color: #ecf0f1;
+}
+
+body.dark-theme .hero-slider {
+    background-color: #3b4a5a;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-theme .hero-slider .hero-content {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+body.dark-theme .slider-controls button {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ecf0f1;
+}
+
+body.dark-theme .slider-controls button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+body.dark-theme .card {
+    background-color: #fff;
+    color: #ecf0f1;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-theme .card:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+}
+
+body.dark-theme .modal-content {
+    background-color: #3b4a5a;
+    color: #ecf0f1;
+}
+
+body.dark-theme .close-modal {
+    color: #ecf0f1;
+}
+body.dark-theme button {
+    background-color: #34495e; 
+    color: #ecf0f1;
+    border: 1px solid #2c3e50; 
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+body.dark-theme button:hover {
+    background-color: #2c3e50;
+    transform: scale(1.05); 
+    color: #ffffff; 
+}
+
+
+@media screen and (max-width: 768px) {
+    .sidenav {
+        height: auto;
+        position: relative;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .hero-slider {
+        height: 450px;
+    }
+
+    .hero-slider h2 {
+        font-size: 2rem;
+        text-wrap: wrap; 
+    }
+    .slider-controls {
+        position: static; 
+        margin-top: 10px; 
+        display: flex;
+        justify-content: center; 
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust card size for smaller screens */
+    }
+    
+}
+

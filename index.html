@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- sidenav -->
+        <div class="sidenav">
+            <div class="logo">
+                <!-- <img src="images/e-commerce.avif" alt="Logo" class="logo-img"> -->
+                <h2 class="logo-text">My Dashboard</h2>
+            </div>
+            <nav>
+                <ul class="sidenav-list">
+                    <li><a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="#"><i class="fas fa-user"></i> Profile</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                    <li><a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-actions">
+                <button class="theme-toggle">Toggle Theme</button>
+                <button id="open-form">Open Form</button>
+            </div>
+        </div>
+
+        <!-- main content -->
+        <div class="main-content">
+            <!-- Hero Slider Section -->
+            <section class="hero-slider">
+                <div class="hero-slide active">
+                    <div class="hero-content">
+                        <h2>Manage Everything in One Place</h2>
+                        <p>Powerful tools for better productivity</p>
+                        <button id="open-form-btn">Get Started</button>
+                    </div>
+                </div>
+                <div class="hero-slide">
+                    <div class="hero-content">
+                        <h2>View Your Gallery</h2>
+                        <p>Quick access to your saved media</p>
+                        <button id="open-gallery-btn">Open Gallery</button>
+                    </div>
+                </div>
+                <div class="hero-slide">
+                    <div class="hero-content">
+                        <h2>Switch Between Themes</h2>
+                        <p>Dark mode available with one click</p>
+                        <button class="theme-toggle">Switch Theme</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Dashboarddashboard-widgets Interactive Section -->
+            <section id="card-section">
+                <h1>Welcome to Your Interactive Dashboard</h1>
+                <p>Here you can explore real-time interactions and UI features.</p>
+
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>Live Typing</h3>
+                        <input type="text" id="live-input" placeholder="Type something..." />
+                        <p id="live-display"></p>
+                    </div>
+
+                    <div class="card hover-box">
+                        <h3>Hover Me</h3>
+                        <p>Watch the magic on hover.</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Secret Button</h3>
+                        <button id="secret-btn">Double Click Me</button>
+                        <p id="secret-msg"></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Hidden Form Modal -->
+            <section id="form">
+                <div id="form-modal" class="modal hidden">
+                    <div class="modal-content">
+                        <span class="close-modal" id="close-form">&times;</span>
+                        <h2>Signup Form</h2>
+                        <form id="signup-form">
+                            <label>Email:
+                                <input type="email" id="email" required />
+                                <span id="email-feedback"></span>
+                            </label>
+                            <label>Password:
+                                <input type="password" id="password" required />
+                                <div class="password-checks">
+                                    <p id="check-length"></p>
+                                    <p id="check-symbol"></p>
+                                </div>
+                            </label>
+                            <button type="submit" id="submit-btn">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </div>
+
+    <!-- js -->
+   <script src="script.js"></script>
+</body>
+
+</html>
